@@ -96,6 +96,17 @@ const scoreboard = document.querySelector('#scoreboard');
 const result = document.createElement('div');
 
 
+const digitResults = document.querySelector('#digitResults');
+
+const leaderBoard = document.createElement('div');
+
+
+
+let playerCount=0;
+let computerCount=0;
+let draw=0;
+
+
 
 
 
@@ -111,6 +122,24 @@ rockbtn.addEventListener('click',
         computerContent.textContent = "The Computer Selects "+computerRandom;
         scoreboard.append(result);
         result.textContent = "You "+gameResult;
+        if (gameResult === "win"){
+            playerCount++;
+        }
+        else if (gameResult === "lose"){
+            computerCount++;
+        }
+        else {
+            draw++;
+        };
+        leaderBoard.textContent ="Win: " +playerCount+ ", Lose: " +computerCount+ ", Draw: "+draw; 
+        digitResults.append(leaderBoard);
+        if (playerCount >= 5 || computerCount >= 5){
+            player.remove();
+            computer.remove();
+        };
+        
+        
+        console.log(playerCount, +computerCount, +draw);
     }  
     );
 
@@ -126,6 +155,25 @@ paperbtn.addEventListener('click',
         computerContent.textContent = "The Computer Selects "+computerRandom;
         scoreboard.append(result);
         result.textContent = "You "+gameResult;
+        if (gameResult === "win"){
+            playerCount++;
+        }
+        else if (gameResult === "lose"){
+            computerCount++;
+        }
+        else {
+            draw++;
+        };
+        leaderBoard.textContent ="Win: " +playerCount+ ", Lose: " +computerCount+ ", Draw: "+draw; 
+        digitResults.append(leaderBoard);
+        if (playerCount >= 5 || computerCount >= 5){
+            player.remove();
+            computer.remove();
+        };
+        
+        
+        
+        console.log(playerCount, +computerCount, +draw);
     }
     );
 
@@ -141,8 +189,38 @@ scissorsbtn.addEventListener('click',
         computerContent.textContent = "The Computer Selects "+computerRandom;
         scoreboard.append(result);
         result.textContent = "You "+gameResult;
+        if (gameResult === "win"){
+            playerCount++;
+        }
+        else if (gameResult === "lose"){
+            computerCount++;
+        }
+        else {
+            draw++;
+        };
+        leaderBoard.textContent ="Win: " +playerCount+ ", Lose: " +computerCount+ ", Draw: "+draw; 
+        digitResults.append(leaderBoard);
+        if (playerCount >= 5 || computerCount >= 5){
+            player.remove();
+            computer.remove();
+        };
+        
+        
+        
+        console.log(playerCount, +computerCount, +draw);
     }
     );
+    
+
+
+
+
+    
+    
+    
+    
+
+    
  
 
 
