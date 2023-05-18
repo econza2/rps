@@ -100,6 +100,14 @@ const digitResults = document.querySelector('#digitResults');
 
 const leaderBoard = document.createElement('div');
 
+const overallPlayer = document.createElement('div');
+overallPlayer.textContent = "PLAYER WINS";
+
+const overallComputer =document.createElement('div');
+overallComputer.textContent = 'COMPUTER WINS';
+
+const refreshButton = document.createElement('button');
+refreshButton.innerHTML = '<button onclick="location.reload();">Play Again</button>'
 
 
 let playerCount=0;
@@ -133,10 +141,24 @@ rockbtn.addEventListener('click',
         };
         leaderBoard.textContent ="Win: " +playerCount+ ", Lose: " +computerCount+ ", Draw: "+draw; 
         digitResults.append(leaderBoard);
-        if (playerCount >= 5 || computerCount >= 5){
+        /*if (playerCount >= 5 || computerCount >= 5){
             player.remove();
             computer.remove();
-        };
+        };*/
+        if (playerCount >= 5 && computerCount < 5){
+            player.remove();
+            computer.remove();
+            scoreboard.remove(result);
+            digitResults.append(overallPlayer);
+            digitResults.append(refreshButton);
+        }
+        else if (computerCount >= 5 && playerCount <5){
+            player.remove();
+            computer.remove();
+            scoreboard.remove(result);
+            digitResults.append(overallComputer);
+            digitResults.append(refreshButton);
+        }
         
         
         console.log(playerCount, +computerCount, +draw);
@@ -166,11 +188,25 @@ paperbtn.addEventListener('click',
         };
         leaderBoard.textContent ="Win: " +playerCount+ ", Lose: " +computerCount+ ", Draw: "+draw; 
         digitResults.append(leaderBoard);
-        if (playerCount >= 5 || computerCount >= 5){
+        /*if (playerCount >= 5 || computerCount >= 5){
             player.remove();
             computer.remove();
-        };
-        
+        };*/
+        if (playerCount >= 5 && computerCount < 5){
+            player.remove();
+            computer.remove();
+            scoreboard.remove(result);
+            digitResults.append(overallPlayer);
+            digitResults.append(refreshButton);
+            
+        }
+        else if (computerCount >= 5 && playerCount <5){
+            player.remove();
+            computer.remove();
+            scoreboard.remove(result);
+            digitResults.append(overallComputer);
+            digitResults.append(refreshButton);
+        }
         
         
         console.log(playerCount, +computerCount, +draw);
@@ -200,10 +236,24 @@ scissorsbtn.addEventListener('click',
         };
         leaderBoard.textContent ="Win: " +playerCount+ ", Lose: " +computerCount+ ", Draw: "+draw; 
         digitResults.append(leaderBoard);
-        if (playerCount >= 5 || computerCount >= 5){
+        /*if (playerCount >= 5 || computerCount >= 5){
             player.remove();
             computer.remove();
-        };
+        };*/
+        if (playerCount >= 5 && computerCount < 5){
+            player.remove();
+            computer.remove();
+            scoreboard.remove(result);
+            digitResults.append(overallPlayer);
+            digitResults.append(refreshButton);
+        }
+        else if (computerCount >= 5 && playerCount <5){
+            player.remove();
+            computer.remove();
+            scoreboard.remove(result);
+            digitResults.append(overallComputer);
+            digitResults.append(refreshButton);
+        }
         
         
         
